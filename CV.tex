@@ -1,0 +1,186 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{0pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{0pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge {Amith Hossain}} \\ \vspace{4pt}
+    \underline{amith12355@gmail.com} $|$
+    \href{https://linkedin.com/in/amithhossain}{\underline{linkedin.com/in/amithhossain/}} $|$
+    \href{https://github.com/ahhossain}{\underline{github.com/ahhossain}}
+\end{center}
+
+
+\section{Summary}
+  Experienced DevOps / Production Engineer with \textbf{7 years of proven expertise} in maintaining high availability systems and critical software development within distributed, ultra low latency environments. Skilled at designing and developing complex python \textbf{workflows}, \textbf{automations}, \textbf{monitoring} and \textbf{observability} solutions.
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {DevOps / Production Engineer}{Oct 2023 -- Present}
+      {Susquehanna International Group}{Dublin, Ireland}
+      \resumeItemListStart
+        \resumeItem{Proactively monitored and resolved production issues within low latency trading environment comprising \textbf{10 global regions} and \textbf{100+ bare metal hosts}. Specialized in \textbf{network} connectivity, \textbf{server} outages, and \textbf{software} crashes}
+        \resumeItem{\textbf{Drove implementation a cross-site multicast UDP messaging solution} between London and Dublin, involving IP registration, PCAP setup, collaboration with networking for VLAN and NIC configuration, and development of Python scripts for publisher/subscriber testing and validation}
+        \resumeItem{Took \textbf{ownership} and delivered on DevOps and infrastructure requirements to commence trading on \textbf{3 new exchanges} overcoming complex roadblocks through cross-functional collaboration.}
+        \resumeItem{Streamlined software deployments using Octopus Deploy \textbf{reducing software deployment times by 15 mins}.}
+        \resumeItem{Utilized \textbf{Ansible} across trading environment eliminating configuration drift and consistent deployments.}
+        \resumeItem{Designed and Developed complex data pipelines and automations using Apache Airflow and Python \textbf{eliminating 4 hours of manual weekly toil}.}
+        \resumeItem{Developed web dashboard in \textbf{Python (Flask)} enabling \textbf{observability} over failed workflows.}
+        \resumeItem{Developed custom \textbf{REST API} endpoint \textbf{monitoring} solution with content-based alerting.}
+        \resumeItem{Refactored \textbf{20+ legacy automations}, improving functionality and reliability.}
+        \resumeItem{Maintained code base utilising \textbf{version control} best practices and code reviews with asynchronous tools such as Jira, Confluence, and GitLab.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Site Reliability Engineer}{Sep 2021 -- Oct 2023}
+      {ServiceNow}{Dublin, Ireland}
+      \resumeItemListStart
+        \resumeItem{Carried out testing and QA \textbf{70+ automations} for new data center rollout resolving bugs and resolved blockers completing all requriements \textbf{3 weeks ahead fo schedule}}
+        \resumeItem{Took \textbf{initiative} to explore and evaluate an existing underused automation platform. \textbf{Created proof of concept} and collaborated with fellow engineers, leading to reduction in monitoring noise.}
+        \resumeItem{Maintained databases and web servers which consisted of load-balancing, upgrades, performance, migrations, backups, restores and manual configuration changes following ITIL practices.}
+        \resumeItem{Drove resolution of incidents and escalations related to customer ServiceNow Instances.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Senior Technical Support Engineer}{Oct 2018 -- Sep 2021}
+      {VMWare}{Cork, Ireland}
+      \resumeItemListStart
+        \resumeItem{\textbf{Managed escalations} from Microsoft and Google engineers on their respective VMware cloud platforms.}
+        \resumeItem{\textbf{Promoted twice within 3 years} to a senior position by vastly exceeding expectations set by management.}
+        \resumeItem{Resolved technical issues with VMWare products such as VCF, vSphere, vCenter.}
+        \resumeItem{Engaged engineering teams to resolved bugs encountered and advocate for new features required by customers}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Go, Powershell, Bash, SQL, HTML/CSS} \\
+     \textbf{Tools}{: Git, Apache Airflow, Ansible, Jira/Confluence, Octopus Deploy} \\
+     \textbf{General}{: Networking, Windows, Linux, Software Development, Automations, APIs} \\
+    }}
+ \end{itemize}
+
+
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Trinity Collleg Dublin}{Dublin, Ireland}
+      {BScc Electronic Engineering}{Sep 2014 -- May 2018}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

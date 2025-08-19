@@ -1,0 +1,73 @@
+# .gitignore for LaTeX projects
+# This file tells Git which files to ignore.
+# It prevents temporary and generated files from cluttering your repository.
+
+### LaTeX temporary files ###
+# General auxiliary files
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.dvi
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.tdo
+*.run.xml
+*.spl
+*.vrb
+*.gz
+
+# Generated content
+#*.pdf
+# NOTE: The final PDF is often included in a repository for easy viewing.
+# If you want to commit your final PDF, just remove or comment out the line above.
+
+# DVI and PostScript files
+*.dvi
+*.ps
+
+# Pgf/TikZ/etc. cache
+_latex.out
+_latex.log
+_latex.synctex.gz
+*.sps
+*.tds
+
+# Kile specific files
+*.okl
+
+# AUCTeX temporary files
+_region_.tex
+
+# Editors' temporary files (e.g., TeXstudio, VS Code, etc.)
+# These may vary depending on your setup.
+*.bak
+*.old
+*.~
+*~(
+*.swp
+*.swx
+*.vrb
+*.vscode-settings.json
+*.latexmkrc
+*.latexmk
+*.tex.backup
+*.tex.bak
+
+# Bibliography-related files
+*.bbl
+*.blg
+*.bib.bak
+# Cache files for BibLaTeX
+*-blx.bib
+*-blx.run.xml
+*-blx.log
+*-blx.aux
+*.bcf
