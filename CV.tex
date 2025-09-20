@@ -54,7 +54,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-\vspace{0pt}\scshape\raggedright\large
+\vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -64,40 +64,33 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1\vspace{-2pt}}
+    {#1\vspace{0.5pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{1pt}\item
+  \vspace{-5pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{0pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -126,16 +119,29 @@
       {DevOps / Production Engineer}{Oct 2023 -- Present}
       {Susquehanna International Group}{Dublin, Ireland}
       \resumeItemListStart
-        \resumeItem{Proactively monitored and resolved production issues within low latency trading environment comprising \textbf{10 global regions} and \textbf{200+ bare metal hosts}. Specialized in \textbf{network} connectivity, \textbf{server} outages, and \textbf{software} crashes}
-        \resumeItem{Took ownership and delivered on DevOps and infrastructure requirements to commence trading on \textbf{3 new exchanges} overcoming complex roadblocks through cross-functional collaboration.}
-        \resumeItem{Streamlined software deployments using Octopus Deploy \textbf{reducing software deployment times by 15 mins}.}
-        \resumeItem{Utilized \textbf{Ansible} across trading environment eliminating configuration drift and consistent deployments.}
-        \resumeItem{Designed and Developed complex data pipelines and automations using Apache Airflow and Python \textbf{eliminating 4 hours of manual weekly toil}.}
-        \resumeItem{Developed web dashboard in Python (Flask) enabling \textbf{observability into 250+ reconciliation workflows}.}
-        \resumeItem{Developed custom API endpoint monitoring and alerting solution for a critical time sync service on \textbf{35 hosts split between Chicago and Frankfurt}.}
-        \resumeItem{Planned and executed migration to .NET 8. Developed ansible playbook and installed .NET 8 across \textbf{300+ Prod and Dev hosts}. Deployed and tested new versions of \textbf{16 Trading Apps}. Collaborated with Traders to seamlessly switch over with minimal downtime}
-        \resumeItem{Refactored \textbf{20+ legacy automations}, improving functionality and reliability.}
-        \resumeItem{Maintained code base utilizing \textbf{version control} best practices and code reviews with asynchronous tools such as Jira, Confluence, and GitLab.}
+        \resumeItem{Responsible for production support of ultra low latency, high frequency trading environment.}
+        \resumeItemListStart
+          \resumeItem{Proactively monitored and resolved production issues accross \textbf{10 global regions} and \textbf{200+ bare metal hosts}.}
+          \resumeItem{Developed  API endpoint monitoring and alerting solution for a critical time sync service on 35 hosts split between Chicago and Frankfurt.}
+          \resumeItem{Maintained stable and consistant production environment using \textbf{Ansible} for configuration management }
+        \resumeItemListEnd
+        \resumeItem{Saved \textbf{4 hours per week} for the team by migrating \textbf{250+ reconciliation workflows} to modern platform}
+        \resumeItemListStart
+          \resumeItem{Moved from basic job scheduler to defining workflow in code using Apache \textbf{Airflow} + \textbf{Python} }
+          \resumeItem{Added handling and remediation for failure scenarios which previously required manual intervention}
+          \resumeItem{Developed web dashboard in Python (Flask) enabling \textbf{observability} and rapid triaging.}
+        \resumeItemListEnd
+        \resumeItem{Planned and executed migration to .NET 8 within 1 week}
+        \resumeItemListStart
+          \resumeItem{Deployed and tested .NET 8 versions of \textbf{16 Trading Apps}.}
+          \resumeItem{Developed ansible playbook and installed required libraries + tools across \textbf{300+ Prod and Dev hosts}.}
+          \resumeItem{Collaborated with Traders to seamlessly switch over with zero downtime and zero production incidents}
+        \resumeItemListEnd
+        \resumeItem{Implemented Devops practices to software release pipeline.}
+        \resumeItemListStart
+          \resumeItem{Created \textbf{deployment pipelines} in Octopus Deploy resulting deployments of new releases within \textbf{5 mins} }
+          \resumeItem{Ensured easy rollback by maintaining \textbf{canary deployment} system with Prod and Pilot versions.}
+        \resumeItemListEnd
       \resumeItemListEnd
 
     \resumeSubheading
@@ -163,11 +169,11 @@
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0.0in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, Go, Powershell, Bash, SQL, HTML/CSS} \\
-     \textbf{Tools}{: Git, Apache Airflow, Ansible, Jira/Confluence, Octopus Deploy} \\
-     \textbf{General}{: Networking, Windows, Linux, Software Development, Automations, APIs} \\
+     \textbf{Languages}{: Python, Powershell, Bash} \\
+     \textbf{Tools}{: Git, Apache Airflow, Ansible, Octopus Deploy} \\
+     \textbf{General}{: Networking, Windows, Linux, Automations} \\
     }}
  \end{itemize}
 
